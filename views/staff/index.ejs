@@ -1,0 +1,31 @@
+<% include ../partials/header.ejs %>
+
+<h1>Staff Members</h1>
+
+<a href="./staff/add"><p>Add new Campers</p></a>
+
+<table class="table ">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+         <th>Phone</th>
+        <th>Role</th>
+        <th>Manage</th>
+    </tr>
+
+    <% for (var i=0; i < staff.length; i++) { %>
+
+        <tr>
+            <td class="success"><%= staff[i].staffname %></td>
+            <td><%= staff[i].stafflastname %></td>
+            <td><%= staff[i].phone %></td>
+            <td><%= staff[i].role %></td>
+            <td>
+                <a href="/staff/<%= staff[i]._id %>" class="btn btn-info"><p>Edit</p></a>
+                <a href="/staff/delete/<%= staff[i]._id %>" class="btn btn-info confirmation">Delete</a>
+
+            </td>
+            <% }%>
+        </tr>
+</table>
+<% include ../partials/footer.ejs %>

@@ -15,9 +15,8 @@ var localStrategy = require('passport-local').Strategy;
 var index = require('./routes/index');
 var users = require('./routes/users');
 var myclients = require ('./routes/clients');
+var staff = require('./routes/staff');
 var app = express();
-
-
 
 // connection to the database
 
@@ -83,6 +82,7 @@ passport.deserializeUser(peoples.deserializeUser());
 app.use('/', index);
 app.use('/users', users);
 app.use('/myclients', myclients);
+app.use('/staff', staff);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
