@@ -4,33 +4,36 @@
 <main class="container">
 
 
-<h1> Add Client/Projects </h1>
+<h1> Add Parents/Campers</h1>
 <form method="post">
     <div class="form-group">
-        <label for="firstname" class="col-sm-2 control-label">First Name: </label>
-        <input name="firstname" id="name" required  />
+        <label for="parentname" class="col-sm-2 control-label">First Name: </label>
+        <input name="parentname" id="parentname" required  />
     </div>
     <div class="form-group">
-        <label for="lastname" class="col-sm-2 control-label">Last Name: </label>
-        <input name="lastname" id="lastname" required  />
+        <label for="parentlastname" class="col-sm-2 control-label">Last Name: </label>
+        <input name="parentlastname" id="parentlastname" required  />
     </div>
             <div class="form-group">
-        <label for="starttime" class="col-sm-2 control-label">starttime </label>
-        <input name="starttime" id="starttime" type:"number"required/>
+        <label for="phone" class="col-sm-2 control-label">Phone </label>
+        <input name="phone" id="phone" type:"number"required/>
     </div>
 
     <div class="form-group">
-        <label for="endtime" class="col-sm-2 control-label">endtime  </label>
-        <input name="endtime" id="endtime"  type="number" min="1" max="31"  />
+        <label for="campername" class="col-sm-2 control-label">camper Name: </label>
+        <input name="campername" id="campername" required  />
     </div>
     <div class="form-group">
-        <label for="date" class="col-sm-2 control-label">date </label>
-        <input name="date" id="date"  type="number" min="1" max="12"/>
+        <label for="notes" class="col-lg-2 col-sm-2 control-label">Notes: </label>
+        <input name="notes" id="notes"  required />
     </div>
-
     <div class="form-group">
-        <label for="parentname" class="col-sm-2 control-label">End Month </label>
-        <input name="parentname" id="parentname"  type="text" min="1" max="12" />
+        <label for="medical" class="col-sm-2 control-label">Medical: </label>
+      <input name="medical" id="medical" required  />
+    </div>
+    <div class="form-group">
+        <label for="code" class="col-sm-2 control-label">Code </label>
+        <input name="code" id="code"  type="number" />
     </div>
     <button class="btn btn-success col-sm-offset-2">Save</button>
 
