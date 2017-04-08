@@ -45,7 +45,7 @@ router.post('/register', function (req, res, next) {
 });
 
 router.post('/login', passport.authenticate('local', {
-    successRedirect: '/myclients',
+    successRedirect: '/myclients/landing',
     failureRedirect: '/login',
     failureMessage: 'Please Login again'
 }));

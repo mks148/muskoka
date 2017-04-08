@@ -13,7 +13,15 @@ function checking(req,res,next) {
         return next();
     }
     res.redirect('/login');
+
 }
+// GET /myclients/clientLanding
+router.get('/landing', checking, function(req, res, next) {
+  res.render('myclients/landing', {
+     title: 'Add Edit Users',
+      user: req.user
+  });
+});
 router.get('/', function(req, res, next) {
     Clients.find(function(err, lists) {
         if (err) {
@@ -21,6 +29,7 @@ router.get('/', function(req, res, next) {
             res.end(err);
             return;
         }
+
 
         res.render('myclients/index', {
             lists:lists,
