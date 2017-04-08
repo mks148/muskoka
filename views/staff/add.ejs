@@ -1,0 +1,28 @@
+<% include ../partials/header.ejs %>
+
+
+<main class="container">
+
+
+<h1> Add Parents/Campers</h1>
+<form method="post">
+    <div class="form-group">
+        <label for="staffname" class="col-sm-2 control-label">First Name: </label>
+        <input name="staffname" id="staffname" required  />
+    </div>
+    <div class="form-group">
+        <label for="stafflastname" class="col-sm-2 control-label">Last Name: </label>
+        <input name="stafflastname" id="stafflastname" required  />
+    </div>
+    <div class="form-group">
+        <label for="phone" class="col-sm-2 control-label">Phone </label>
+        <input name="phone" id="phone" type:"number"required/>
+    </div>
+    <div class="form-group">
+        <label for="role" class="col-sm-2 control-label">Role: </label>
+        <input name="role" id="role" required  />
+    </div>
+    <button class="btn btn-success col-sm-offset-2">Save</button>
+</form>
+</main>
+<% include ../partials/footer.ejs %>

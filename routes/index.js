@@ -15,7 +15,6 @@ router.get('/', function(req, res, next) {
   });
 });
 
-
 router.get('/login', function(req, res, next) {
     var messages=req.session.messages || [];
     req.session.messages = [];
@@ -23,7 +22,6 @@ router.get('/login', function(req, res, next) {
     title:"Login",
       messages:messages,
       user:req.user
-
   });
 });
 
