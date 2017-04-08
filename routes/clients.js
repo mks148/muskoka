@@ -44,12 +44,13 @@ router.get('/add', checking, function(req, res, next) {
 router.post('/add', checking, function (req,res,next) {
 
     Clients.create({
-        firstname: req.body.firstname,
-        lastname: req.body.lastname,
-        starttime: req.body.starttime,
-        endtime: req.body.endtime,
-        date: req.body.date,
-        parentname: req.body.parentname
+        parentname: req.body.parentname,
+        parentlastname: req.body.parentlastname,
+        phone: req.body.phone,
+        campername: req.body.campername,
+        notes: req.body.notes,
+        medical: req.body.medical,
+        code: req.body.code
 
 
     },function(err) {
@@ -95,12 +96,13 @@ router.post('/:_id', checking, function (req,res,next)
 {
     var client = new Clients({
         _id:req.params._id,
-        firstname: req.body.firstname,
-        lastname: req.body.lastname,
-        starttime: req.body.starttime,
-        endtime: req.body.endtime,
-        date: req.body.date,
-        parentname: req.body.parentname
+        parentname: req.body.parentname,
+        parentlastname: req.body.parentlastname,
+        phone: req.body.phone,
+        campername: req.body.campername,
+        notes: req.body.notes,
+        medical: req.body.medical,
+        code: req.body.code
 
 
     });
