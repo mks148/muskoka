@@ -22,7 +22,14 @@ router.get('/landing', checking, function(req, res, next) {
       user: req.user
   });
 });
-router.get('/', function(req, res, next) {
+
+router.get('/payments', checking, function(req, res, next) {
+  res.render('myclients/payments', {
+     title: 'Pay',
+      user: req.user
+  });
+});
+router.get('/', checking, function(req, res, next) {
     Clients.find(function(err, lists) {
         if (err) {
             console.log(err);
@@ -57,6 +64,8 @@ router.post('/add', checking, function (req,res,next) {
         parentlastname: req.body.parentlastname,
         phone: req.body.phone,
         campername: req.body.campername,
+        campername1: req.body.campername1,
+        campername2: req.body.campername2,
         notes: req.body.notes,
         medical: req.body.medical,
         code: req.body.code
@@ -109,6 +118,8 @@ router.post('/:_id', checking, function (req,res,next)
         parentlastname: req.body.parentlastname,
         phone: req.body.phone,
         campername: req.body.campername,
+        campername2: req.body.campername2,
+        campername3: req.body.campername3,
         notes: req.body.notes,
         medical: req.body.medical,
         code: req.body.code
@@ -125,8 +136,5 @@ router.post('/:_id', checking, function (req,res,next)
     });
 
 });
-
-
-
 
 module.exports=router;
