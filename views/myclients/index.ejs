@@ -1,45 +1,65 @@
 <% include ../partials/header.ejs %>
 
+<header>
+      <nav class="campProfileNav">
+          <ul>
+              <a href="/myclients" class="buttonPrime buttonPrimeHover">Profile</a>
+              <a href="myclients/pickUp" class="buttonPrime buttonPrimeHover">Sign In/Out camper</a>
+              <a href="myclients/payments" class="buttonPrime buttonPrimeHover">Payments</a>
+              <a href="myclients/campReg" class="buttonPrime buttonPrimeHover">Register to camp</a>
+          </ul>
+      </nav>
+  </header>
 <h1> Parents/Camper Managing Page</h1>
 <% if (user) { %>
 <a href="/myclients/add">Add new Campers</a>
 <% } %>
 <table class="table table-striped table-bordered table-hover">
-    <tr>
-        <th>parentname</th>
-        <th>parentlastname</th>
-         <th>phone</th>
-        <th>campername</th>
-        <th>notes</th>
-        <th> Medical</th>
+   <tr>
         <th>
-        Code
+          Image
         </th>
+       <th>Parent's Name</th>
 
-        <% if (user) { %> <th>Manage</th> <% } %>
-    </tr>
+        <th>Phone</th>
+       <th>Camper Name</th>
+       <th>Camper 2 Name</th>
+       <th>Camper 3 Name</th>
+       <th>Notes</th>
+       <th>Medical Notes</th>
+       <th>
+       Parent Code
+       </th>
+
+       <% if (user) { %> <th>Manage</th> <% } %>
+   </tr>
 <% for (var i=0; i < lists.length; i++) { %>
 
-    <tr>
-        <td class="success"><%= lists[i].parentname %></td>
-        <td><%= lists[i].parentlastname %></td>
-        <td><%= lists[i].phone %></td>
-        <td><%= lists[i].campername %></td>
-        <td class="info"><%= lists[i].notes %></td>
-        <td><%= lists[i].medical %></td>
+   <tr>
+        <td class="success">
+        <img src="../images/download.svg" alt="..." class="img-thumbnail" width="100px">
+        </td>
+       <td class="success"><%= lists[i].parentname %></td>
+
+       <td><%= lists[i].phone %></td>
+       <td><%= lists[i].campername %></td>
+       <td><%= lists[i].campername2 %></td>
+       <td><%= lists[i].campername3 %></td>
+       <td class="info"><%= lists[i].notes %></td>
+       <td><%= lists[i].medical %></td>
 <td><%= lists[i].code %></td>
 
-        <% if (user) { %>
-        <td>
-            <a href="/myclients/<%= lists[i]._id %>" class="btn btn-info">Edit</a>
-            <a href="/myclients/delete/<%= lists[i]._id %>" class="btn btn-info confirmation">Delete</a>
+       <% if (user) { %>
+       <td>
+           <a href="/myclients/<%= lists[i]._id %>" class="btn btn-info">Edit</a>
+           <a href="/myclients/delete/<%= lists[i]._id %>" class="btn btn-info confirmation">Delete</a>
 
-        </td>
-        <% }%>
-    </tr>
+       </td>
+       <% }%>
+   </tr>
 
 
-    <% }%>
+   <% }%>
 </table>
 
 <% include ../partials/footer.ejs %>

@@ -1,0 +1,40 @@
+<% include ../partials/header.ejs %>
+
+<main>
+   <section>
+       <h1>Camper Sign Out</h1>
+       <form method="post">
+           <div class="form-group">
+               <input type="hidden" name="process" id="process" value="Sign Out" required/>
+           </div>
+           <div class="form-group">
+               <label for="phone" class="col-sm-2 control-label">Phone Number: </label>
+               <input name="phone" id="phone" required/>
+           </div>
+           <div class="form-group">
+               <label for="campername" class="col-sm-2 control-label">Camper Name: </label>
+               <input name="campername" id="campername" required/>
+           </div>
+           <div class="form-group">
+               <label for="campername2" class="col-sm-2 control-label">Camper 2 Name: </label>
+               <input name="campername2" id="campername2" required/>
+           </div>
+           <div class="form-group">
+               <label for="campername3" class="col-sm-2 control-label">Camper 3 Name: </label>
+               <input name="campername3" id="campername3" />
+           </div>
+           <div class="form-group">
+               <label for="code" class="col-sm-2 control-label">Code: </label>
+               <input name="code" id="code" required />
+           </div>
+           <div class="form-group">
+               <label for="note" class="col-sm-2 control-label">Note:</label>
+               <input name="note" id="note" />
+           </div>
+           <button class="btn btn-success col-sm-offset-2">Sign Out</button>
+       </form>
+   </section>
+
+</main>
+
+<% include ../partials/footer.ejs %>

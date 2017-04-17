@@ -1,10 +1,16 @@
 
 
 @import url(http://fonts.googleapis.com/css?family=Roboto); /* FREE GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 30px;
+}
+
+main {
+    width: 70%;
+    margin: auto auto;
 }
 
 .mylist{
@@ -27,9 +33,9 @@ body {
 .page-head-line {
     font-weight: 900;
     padding-bottom: 20px;
-    border-bottom: 2px solid #F0677C;
+    /*border-bottom: 2px solid #F0677C;*/
     text-transform: uppercase;
-    color: #F0677C;
+    /*color: #F0677C;*/
     font-size: 20px;
     margin-bottom: 40px;
 }
@@ -48,24 +54,24 @@ body {
 }
 .login-icon {
     height: 60px;
-width: 60px;
-padding: 13px;
-border-radius: 50%;
-font-size: 30px;
-margin-bottom: 20px;
-color: #fff;
-text-align: center;
-cursor:pointer;
-background-color:#F0677C;
--webkit-border-radius:50%;
+    width: 60px;
+    padding: 13px;
+    border-radius: 50%;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #1e1e1e;
+    text-align: center;
+    cursor:pointer;
+    /*background-color:#F0677C;*/
+    -webkit-border-radius:50%;
     -moz-border-radius:50%;
 }
 /* =============================================================
    HEADER SECTION STYLES
  ============================================================ */
 header {
-    background-color: #F0677C;
-    color: #fff;
+    /*background-color: #F0677C;*/
+    color: #1e1e1e;
     padding: 10px;
     text-align: right;
 }
@@ -140,59 +146,58 @@ header {
         padding-top: 10px;
     }
 
-/* MENU LINKS SECTION*/
+/* =============================================================
+   HEADER SECTION STYLES
+ ============================================================ */
 
-.menu-section {
-    background-color: #3D3D3D;
+header .mainNav {
+    background-color: #215d8d;
+    padding: 10px;
+    outline: 1px solid red;
 }
 
-#menu-top a {
-    color: #FFF;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 10px 10px 10px 10px;
-    text-transform: uppercase;
+header .mainNav > * {
+    width: 100%;
 }
 
-.menu-top-active {
-    background-color: #C36464;
+header .mainNav div[class="preHeader flexBox"] {
+    outline: 1px solid green;
+    align-content: center;
+    justify-content: center;
 }
 
-.menu-section .nav > li > a:hover,.menu-section .nav > li > a:focus {
-    background-color: #F0677C!important;
+header .mainNav div[class="preHeader flexBox"] > * {
+    outline: 1px solid yellow;
 }
 
-.menu-section .dropdown-menu > li > a:hover,.menu-section .dropdown-menu > li > a:focus {
-    background-color: #F0677C!important;
-}
-
-.navbar-inverse {
-    background-color: #C36464;
-    border-color: transparent;
-}
-
-.navbar-toggle {
-    background-color: #F0677C;
-    border: 1px solid #fff;
-}
-
-.navbar {
-    margin-bottom: 0px;
-}
 /* =============================================================
    FOOTER SECTION STYLES
  ============================================================ */
 footer {
-    padding: 10px;
+    padding: 8px;
     color: #fff;
-    font-size: 12px;
-    background-color: #C36464;
+    background-color: #4b7199;
+    margin: 0 !important;
 }
 
-    footer a, footer a:hover {
-        color: #fff;
-        text-decoration: none;
-    }
+
+footer .container .footerFlexBox {
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: no-wrap;
+    align-items: center;
+}
+footer .container .footerFlexBox h2 {
+    margin-bottom: 20px;
+}
+
+footer .container div[class="footerFlex flexBox"]  {
+    justify-content: space-around;
+}
+
+footer .container div[class="footerFlex flexBox"] > * {
+    padding: 5px 15px;
+}
 
 /*==============================================
     DASHBOARD  STYLES
@@ -297,4 +302,160 @@ footer {
 
 .btn-google {
     background-color: #c32f10;
+}
+
+
+/* ================================================================ */
+/*  CAMPER PROFILES PAGE ========================================== */
+/* ================================================================ */
+
+colors {
+    --backBlue: #215d8d;
+    --red: #bc3333;
+    --grey: #d2d2d2;
+    --textBlue: #285796;
+    --textWhite: #fafafa;
+}
+
+
+/* ----------------------------------------------  SUB NAVIGATION  */
+.campProfileNav {
+    text-align: left;
+    padding: 0 0 2px 0;
+
+    border-bottom: 1px solid grey;
+}
+
+.campProfileNav a {
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 10px 10px 0 0;
+    display: inline-block;
+    list-style: none;
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=0, Color=#616161)";/*IE 8*/
+    -moz-box-shadow: 0 5px 8px 6px rgba(97,97,97,0.3) inset;/*FF 3.5+*/
+    -webkit-box-shadow: 0 5px 8px 6px rgba(97,97,97,0.3) inset;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+    box-shadow: 0 5px 8px 6px rgba(97,97,97,0.3) inset;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#616161); /*IE 5.5-7*/
+
+}
+
+.campProfileNav ul {
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
+.addCamperBtn {
+    margin: 15px 0;
+}
+
+/* ----------------------------------------------  SUB NAVIGATION  */
+
+
+/*  Profiles ========================================== */
+.profileContainer {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  margin: 15px 0;
+
+  justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.profileContainer .flex-item {
+    padding: 0 25px 0 0;
+}
+
+.profileContainer img {
+    height: 120px;
+}
+
+.separatorPortfolio {
+    display: block;
+    padding: 5px 0;
+    background-color: RGB(200,200,200);
+    border-top: 4px solid #285796;
+}
+
+/*  Profiles ========================================== */
+
+
+/*  BUTTONS ========================================== */
+.buttonPrime {
+    background-color: #215d8d;
+    border-radius: 5px;
+    color: #fafafa;
+    padding: 5px 7px;
+    min-width: 70px;
+}
+
+.buttonDanger {
+    background-color: #bc3333;
+    border-radius: 5px;
+    color: #fafafa;
+    padding: 5px 7px;
+    min-width: 70px
+}
+
+.buttonPrimeHover:hover {
+    background-color: #bc3333;
+    color: RGB(230,230,230);
+    text-decoration: none;
+}
+
+.buttonDangerHover:hover {
+    background-color: #285796;
+    color: RGB(200,200,200);
+    text-decoration: none;
+}
+/*  ====================================================== */
+
+
+/*  COMMON CLASSES ========================================== */
+.tableRow {
+    margin-bottom: 5px;
+    border-bottom: 2px solid #285796;
+}
+
+.flexBox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+/*  COMMON CLASSES ========================================== */
+
+
+
+
+.jumbotron-flat {
+  background-color: solid #4DB8FFF;
+  height: 100%;
+  border: 1px solid #4DB8FF;
+  background: white;
+  width: 100%;
+text-align: center;
+overflow: auto;
+}
+
+.paymentAmt {
+    font-size: 80px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.title {
+ padding-top: 15px;
 }
