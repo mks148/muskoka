@@ -3,27 +3,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h4 class="page-head-line">Please Login To Enter </h4>
+                    <h4 class="page-head-line text-center">Please Login To Enter </h4>
 
                 </div>
 
             </div>
             <div class="row">
-                <div class="col-md-6">
-                   <h4> Login with facebook </h4>
-                    <br />
-                    <a href="/facebook" class="btn btn-social btn-facebook">
-                            <i class="fa fa-facebook"></i>&nbsp; Facebook Account</a>
+                <div class="col-md-6 col-md-offset-3">
 
-
-                    <hr />
-                     <h4> Or Login with <strong>Email Account  :</strong></h4>
                     <br />
                     <%if (messages.length > 0) {%>
                     <div class="alert alert-danger"><%= messages %></div>
                     <%}
                     else {%>
-                    <div class="alert alert-info">Login using the below form</div>
+                    <div class="alert alert-info text-center">Login using the below form</div>
                     <% } %>
                     <form method="post">
                     <label for="username" class="col-sm-2 control-label">Email: </label>
@@ -37,6 +30,8 @@
                 </div>
 							</div>
 </div>
+
+
 
 
 

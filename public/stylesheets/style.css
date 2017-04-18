@@ -3,10 +3,17 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto); /* FREE GOOGLE FONT */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
 
+html {
+    position: relative;
+    min-height: 100%;
+}
 body {
+    margin: 0 0 100px; /* bottom = footer height */
     font-family: 'Open Sans', sans-serif;
     line-height: 30px;
+    flex: 1;
 }
+
 
 main {
     width: 70%;
@@ -177,15 +184,19 @@ footer {
     padding: 8px;
     color: #fff;
     background-color: #4b7199;
-    margin: 0 !important;
+
+
+
 }
 
 
 footer .container .footerFlexBox {
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: no-wrap;
+
     align-items: center;
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+
 }
 footer .container .footerFlexBox h2 {
     margin-bottom: 20px;
@@ -433,29 +444,26 @@ colors {
     display: flex;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*  COMMON CLASSES ========================================== */
-
-
-
-
-.jumbotron-flat {
-  background-color: solid #4DB8FFF;
-  height: 100%;
-  border: 1px solid #4DB8FF;
-  background: white;
-  width: 100%;
-text-align: center;
-overflow: auto;
-}
-
-.paymentAmt {
-    font-size: 80px;
-}
-
-.centered {
-    text-align: center;
-}
-
-.title {
- padding-top: 15px;
-}

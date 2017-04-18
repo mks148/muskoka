@@ -15,36 +15,31 @@
     <link href="../stylesheets/font-awesome.css" rel="stylesheet" />
     <!-- CUSTOM STYLE  -->
     <link href="../stylesheets/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../stylesheets/dataTables.css" />
      <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  
+
 </head>
 <body>
     <header>
         <nav class="mainNav">
             <div class="preHeader flexBox">
 
-                <a href="http://realmuskoka.com/" title="Go to Real Muskoka website">Main site</a>
+
 
                 <a href="/" title="Go to Real Muskoka website">
-                    <img src="#" alt="Real Muskoka logo">
+                    <img src="../images/logo.png" alt="Real Muskoka logo" width="100px">
                 </a>
 
-                <a href="###" title="Super user login">Admin</a>
             </div>
 
-            <div class="navHeader flexBox">
-                <a href="/">Home</a>
-                <a href="#">Staff</a>
-                <a href="/myclients">Parents</a>
-            </div>
         </nav>
 
-    </header>
+    </hea der>
     <!-- HEADER END-->
 
     <!-- LOGO HEADER END-->
@@ -56,13 +51,13 @@
                         <ul id="menu-top" class="nav navbar-nav navbar-right">
                             <% if (!user) { %>
                             <li><a href="/">Home</a></li>
-                            <li><a href="/myclients">Parents List</a></li>
+
                             <li><a href="/login">Login</a></li>
                             <li><a href="/register">Register</a></li>
                         </ul>
                             <% }
 else { %>
-                            <li><a href="/myclients">Parents List</a></li>
+                            <li><a href="/myclients"> Campers List</a></li>
                              <li><a href="/logout">Logout</a></li>
                         </ul>
                         <% } %>

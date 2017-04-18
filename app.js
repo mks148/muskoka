@@ -17,6 +17,7 @@ var users = require('./routes/users');
 var myclients = require ('./routes/clients');
 var camper = require('./routes/camper');
 var staff = require('./routes/staff');
+var price = require('./routes/price');
 var app = express();
 
 // connection to the database
@@ -85,23 +86,24 @@ app.use('/users', users);
 app.use('/myclients', myclients);
 app.use('/staff', staff);
 app.use('/camper', camper);
+app.use('/price', price);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
-
-
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error',{title:'Error', user:req.user});
-});
+// app.use(function(req, res, next) {
+//   var err = new Error('Not Found');
+//   err.status = 404;
+//   next(err);
+// });
+//
+//
+// app.use(function(err, req, res, next) {
+//   // set locals, only providing error in development
+//   res.locals.message = err.message;
+//   res.locals.error = req.app.get('env') === 'development' ? err : {};
+//
+//   // render the error page
+//   res.status(err.status || 500);
+//   res.render('error',{title:'Error', user:req.user});
+// });
 
 module.exports = app;

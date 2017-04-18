@@ -3,6 +3,7 @@
  */
 var express = require('express');
 var router = express.Router();
+var Camper = require('../models/camper');
 
 //require client model
 
@@ -18,17 +19,12 @@ function checking(req,res,next) {
 // GET /myclients/clientLanding
 router.get('/landing', checking, function(req, res, next) {
   res.render('myclients/landing', {
-     title: 'Add Edit Users',
+     title: 'Admin Panel',
       user: req.user
   });
 });
 
-router.get('/payments', checking, function(req, res, next) {
-  res.render('myclients/payments', {
-     title: 'Pay',
-      user: req.user
-  });
-});
+
 router.get('/', checking, function(req, res, next) {
     Clients.find(function(err, lists) {
         if (err) {
@@ -45,6 +41,28 @@ router.get('/', checking, function(req, res, next) {
         });
     });
 });
+
+
+//directory
+
+router.get('/directory', checking, function(req, res, next) {
+   Camper.find(function(err, signs) {
+       if (err) {
+           console.log(err);
+           res.end(err);
+           return;
+       }
+       res.render('myclients/directory', {
+           signs:signs,
+           title:"Camper Sign In/Out",
+           user: req.user
+       });
+   });
+});
+
+
+
+
 
 
 // adding the data to the table
