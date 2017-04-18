@@ -1,0 +1,40 @@
+<% include ../partials/header.ejs %>
+<header>
+    <nav class="campProfileNav">
+        <ul>
+            <a href="/myclients" class="buttonPrime buttonPrimeHover">Profile</a>
+            <a href="/price" class="buttonPrime buttonPrimeHover">Payments</a>
+            <a href="myclients/campReg" class="buttonPrime buttonPrimeHover">Register to camp</a>
+        </ul>
+    </nav>
+</header>
+<h1>Sign In/Out Directory</h1>
+<table id="sortable" class="display" cellspacing="0" width="100%">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Phone Number</th>
+        <th>Camper Name</th>
+        <th>Camper 2 Name</th>
+        <th>Camper 3 Name</th>
+        <th>Code</th>
+        <th>Notes</th>
+        <th>Time</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% for (var i=0; i < signs.length; i++) { %>
+    <tr>
+        <td><%= signs[i].process %></td>
+        <td><%= signs[i].phone %></td>
+        <td><%= signs[i].campername %></td>
+        <td><%= signs[i].campername2 %></td>
+        <td><%= signs[i].campername3 %></td>
+        <td><%= signs[i].code %></td>
+        <td><%= signs[i].notes %></td>
+        <td><%= signs[i].created_at %></td>
+    </tr>
+    </tbody>
+    <% }%>
+</table>
+<% include ../partials/footer.ejs %>
